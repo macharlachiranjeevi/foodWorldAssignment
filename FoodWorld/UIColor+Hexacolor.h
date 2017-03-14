@@ -1,5 +1,5 @@
 //
-//  RatingTbleCell.h
+//  UIColor+Hexacolor.h
 //  FoodWorld
 //
 //  Created by chiranjeevi macharla on 14/03/17.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RatingTbleCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UILabel *ratingLbl;
-
+@interface UIColor (Hexacolor)
+- (UIColor *)colorFromHexString:(NSString *)hexString;
 @end

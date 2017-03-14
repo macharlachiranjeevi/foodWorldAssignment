@@ -10,4 +10,5 @@
 
 @interface SameitemsTCell : UITableViewCell<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (nonatomic , weak)IBOutlet UICollectionView *sameItemCollView;
+@property (nonatomic  ,strong)NSArray*similarItemListArry;
 @end

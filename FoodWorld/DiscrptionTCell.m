@@ -25,7 +25,7 @@
     [super layoutSubviews];
     _Col_disc.delegate = self;
     _Col_disc.dataSource = self;
-    [_Col_disc registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"_Col_disc" ];
+    [_Col_disc registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Col_disc" ];
     [_Col_disc reloadData];
 
 
@@ -38,22 +38,18 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
 
-    return 5;
+    return _discArray.count;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 
-    UICollectionViewCell *cell = (UICollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"_Col_disc" forIndexPath:indexPath];
+    UICollectionViewCell *cell = (UICollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"Col_disc" forIndexPath:indexPath];
 
-    UILabel * discLbl = [[ UILabel alloc]initWithFrame:CGRectMake(0, 0, 80, 30)];
-    discLbl.text = @"chiranjeevi";
+  UILabel *  discLbl = [[ UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 30)];
+    NSDictionary * dict =[_discArray objectAtIndex:indexPath.row];
+    discLbl.text = [dict  objectForKey:@"title"];
     discLbl.font = [ UIFont boldSystemFontOfSize:15];
-
     [cell.contentView addSubview:discLbl];
-
-
-
-
     return cell;
 
 }
@@ -61,6 +57,6 @@
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    return CGSizeMake(80, 35);
+    return CGSizeMake(100, 35);
 }
 @end

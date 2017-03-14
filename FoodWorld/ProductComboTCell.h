@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <SDWebImage/UIImageView+WebCache.h>
 @interface ProductComboTCell : UITableViewCell<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *headerName;
 @property (strong, nonatomic) IBOutlet UICollectionView *comboColletionView;
+@property (strong, nonatomic) NSArray* productComboListarry;
 
 @end

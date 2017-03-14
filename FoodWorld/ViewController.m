@@ -28,6 +28,12 @@
 @interface ViewController ()
 {
     NSDictionary * sku_itemDict ;
+    NSDictionary * productVariantList;
+    NSArray * volumeArray;
+    NSArray * productFacetList;
+    NSArray * questionList;
+    NSArray * productComboList;
+    NSArray * similarItemList;
 }
 
 @end
@@ -53,7 +59,14 @@
     NSLog(@"responce from Ser%@",productDetailResponce);
 
     sku_itemDict  = [productDetailResponce objectForKey:@"skuItem"];
+    productVariantList = [productDetailResponce objectForKey:@"productVariantList"];
+    volumeArray = [[[productDetailResponce objectForKey:@"productVariantList"]objectForKey:@"flavours"] valueForKeyPath:@"@unionOfArrays.volumes"];
 
+    productFacetList = [productDetailResponce objectForKey:@"productFacetList"];
+         questionList= [productDetailResponce objectForKey:@"questionList"] ;
+
+    productComboList = [productDetailResponce objectForKey:@"productComboList"];
+    similarItemList = [productDetailResponce objectForKey:@"similarItemList"];
     [_Tbl_productDetail reloadData];
 
 
@@ -92,17 +105,17 @@
             {
                cell = [[NSBundle mainBundle] loadNibNamed:firstCell owner:self options:nil].lastObject;
             }
-
-
             [cell.imr_product sd_setImageWithURL:[NSURL URLWithString:[[sku_itemDict objectForKey:@"skuImageUrls"]firstObject]] placeholderImage:[UIImage imageNamed:@""]];
             cell.lbl_productName.text = [sku_itemDict objectForKey:@"skuName"];
            // cell.lbl_time.text = [sku_itemDict objectForKey:@"skuBrandName"];
-            cell.lbl_discount.text = [NSString stringWithFormat:@"Rs %@",[sku_itemDict objectForKey:@"skuPrice"]];
-            cell.lbl_mrp.text = [sku_itemDict objectForKey:@"skuTotalPrice"];
-            cell.lbl_offer.text = [NSString stringWithFormat:@"%@%% off", [sku_itemDict objectForKey:@"skuOfferPrice"]];
+            cell.lbl_discount.text = [NSString stringWithFormat:@"Rs%@",[sku_itemDict objectForKey:@"skuPrice"]];
+            NSAttributedString * title =
+            [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"Rs%@",[sku_itemDict objectForKey:@"skuTotalPrice"] ]
+                                            attributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)}];
+            cell.lbl_mrp.attributedText = title;
+            cell.lbl_offer.text = [NSString stringWithFormat:@"%@%%Off", [sku_itemDict objectForKey:@"skuOfferPrice"]];
             cell.skuListImageAr =  [sku_itemDict objectForKey:@"skuImageUrls"];
             [cell.col_skuitems reloadData];
-           // cell.textLabel.text = @"My Text";
             return cell;
         }
             break;
@@ -116,7 +129,7 @@
             }
 
 
-            //cell.textLabel.text = @"My Text";
+            cell.ratingLbl.text = [NSString stringWithFormat:@"%@ User Reviews",[sku_itemDict objectForKey:@"skuAverageRating"]];
             return cell;
         }
             break;
@@ -129,6 +142,7 @@
             {
                 cell = [[NSBundle mainBundle] loadNibNamed:thirdCell owner:self options:nil].lastObject;
             }
+            cell.iconAr = [productVariantList objectForKey:@"shades"];
             [cell.iconCollectionView reloadData];
 
             //cell.textLabel.text = @"My Text";
@@ -143,7 +157,10 @@
             {
                 cell = [[NSBundle mainBundle] loadNibNamed:thirdCell owner:self options:nil].lastObject;
             }
-   [cell.iconCollectionView reloadData];
+            cell.headerLbl.text = @"Flavours";
+             cell.veriation = @"F";
+            cell.iconAr = [productVariantList objectForKey:@"flavours"];
+            [cell.iconCollectionView reloadData];
 
             //cell.textLabel.text = @"My Text";
             return cell;
@@ -157,7 +174,12 @@
             {
                 cell = [[NSBundle mainBundle] loadNibNamed:thirdCell owner:self options:nil].lastObject;
             }
-   [cell.iconCollectionView reloadData];
+
+           // volumeArray
+            cell.headerLbl.text = @"Volume";
+            cell.veriation = @"V";
+            cell.iconAr = volumeArray;
+            [cell.iconCollectionView reloadData];
 
             //cell.textLabel.text = @"My Text";
             return cell;
@@ -183,7 +205,11 @@
             {
                 cell = [[NSBundle mainBundle] loadNibNamed:fifthcell owner:self options:nil].lastObject;
             }
-            cell.Lbl_disc.text = @"asjfhasfha; ajshfsjahfasdhf aisj jsjladshfa sdidashfljadkshf asdads i fhadsj sdjfnljadsfldjs fa";
+
+            cell.discArray = productFacetList;
+
+            cell.Lbl_disc.text = [[productFacetList objectAtIndex:indexPath.row] objectForKey:@"content"];
+            cell.Lbl_disc.font = [ UIFont systemFontOfSize:13];
              [cell.Col_disc reloadData];
 
             //cell.textLabel.text = @"My Text";
@@ -194,12 +220,7 @@ case 7:
         {
             QandAcell *cell = [tableView dequeueReusableCellWithIdentifier:sixthCell];
 
-            if (cell == nil)
-            {
-
-
-
-            }
+            cell.questionListAr = questionList;
 
             [cell.qandatbl reloadData ];
 
@@ -210,6 +231,7 @@ case 7:
         case 8:
         {
             ProductComboTCell *cell = [tableView dequeueReusableCellWithIdentifier:SevenCell];
+            cell.productComboListarry = productComboList;
             [cell.comboColletionView reloadData ];
             return cell;
         }
@@ -218,6 +240,7 @@ case 7:
         case 9:
         {
             SameitemsTCell*cell = [tableView dequeueReusableCellWithIdentifier:eightcell];
+            cell.similarItemListArry= similarItemList;
             [cell.sameItemCollView reloadData ];
             return cell;
         }

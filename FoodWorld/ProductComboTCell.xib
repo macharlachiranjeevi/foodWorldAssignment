@@ -16,45 +16,43 @@
             <rect key="frame" x="0.0" y="0.0" width="433" height="289"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="433" height="289"/>
+                <rect key="frame" x="0.0" y="0.0" width="433" height="288"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pxw-QS-R0i">
-                        <rect key="frame" x="8" y="40" width="417" height="231"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Combo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LP-MP-oVS">
+                        <rect key="frame" x="25" y="8" width="153" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="153" id="gWV-h3-15A"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1H0-Cp-shb">
+                        <rect key="frame" x="8" y="37" width="417" height="243"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="231" id="odc-DI-oca"/>
+                            <constraint firstAttribute="height" constant="243" id="DQ2-qs-bgZ"/>
                         </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LoV-hs-7ng">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xX8-W7-YqL">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Combo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LP-MP-oVS">
-                        <rect key="frame" x="25" y="8" width="153" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="JM6-Gk-sXu"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="pxw-QS-R0i" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="3qO-Ts-m2U"/>
-                    <constraint firstAttribute="trailing" secondItem="0LP-MP-oVS" secondAttribute="trailing" constant="255" id="5Bf-tt-uEE"/>
-                    <constraint firstItem="pxw-QS-R0i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="6sX-O4-C95"/>
-                    <constraint firstItem="pxw-QS-R0i" firstAttribute="top" secondItem="0LP-MP-oVS" secondAttribute="bottom" constant="11" id="KjA-NA-Sis"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="pxw-QS-R0i" secondAttribute="bottom" constant="10" id="UBS-YR-g13"/>
-                    <constraint firstItem="0LP-MP-oVS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="Xlc-LR-GWN"/>
-                    <constraint firstItem="0LP-MP-oVS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="fvD-ms-u8I"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="pxw-QS-R0i" secondAttribute="bottom" constant="9" id="khf-fV-zE8"/>
+                    <constraint firstItem="0LP-MP-oVS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="17" id="7fc-3t-cf2"/>
+                    <constraint firstItem="0LP-MP-oVS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="QGt-oW-HPn"/>
+                    <constraint firstItem="1H0-Cp-shb" firstAttribute="top" secondItem="0LP-MP-oVS" secondAttribute="bottom" constant="8" id="cEt-9R-Ci9"/>
+                    <constraint firstItem="1H0-Cp-shb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="oP2-6A-eFe"/>
+                    <constraint firstItem="1H0-Cp-shb" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="qkW-7e-S2r"/>
+                    <constraint firstItem="1H0-Cp-shb" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="uRN-ki-npw"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="comboColletionView" destination="pxw-QS-R0i" id="ycc-em-Hdy"/>
+                <outlet property="comboColletionView" destination="1H0-Cp-shb" id="6PB-iU-EPv"/>
                 <outlet property="headerName" destination="0LP-MP-oVS" id="VRD-Gy-cV6"/>
             </connections>
             <point key="canvasLocation" x="-27.5" y="35.5"/>

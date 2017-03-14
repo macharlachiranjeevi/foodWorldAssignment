@@ -11,5 +11,5 @@
 @interface QandAcell : UITableViewCell<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UITableView *qandatbl;
 @property (strong, nonatomic) IBOutlet UIButton *showBtn;
-
+@property(strong,nonatomic) NSArray * questionListAr;
 @end

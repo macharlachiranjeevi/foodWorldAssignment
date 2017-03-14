@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="331"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="331"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="330"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cvQ-56-JiE">
@@ -54,7 +54,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="27" id="TGh-M7-Tjg"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -80,34 +80,34 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="34" id="HYF-YY-VMR"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndV-76-0z8">
-                        <rect key="frame" x="4" y="298" width="35" height="21"/>
+                        <rect key="frame" x="4" y="298" width="37" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="pIj-sQ-ghS"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
                         <color key="textColor" red="0.81752252578735352" green="0.086497478187084198" blue="0.088906176388263702" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LrE-va-m1n">
-                        <rect key="frame" x="56" y="298" width="42" height="21"/>
+                        <rect key="frame" x="58" y="298" width="39.5" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="zIY-tj-VY3"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
+                        <color key="textColor" red="0.83130210638046265" green="0.83141928911209106" blue="0.83126503229141235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DA2-2i-GIR">
-                        <rect key="frame" x="119" y="298" width="109" height="21"/>
+                        <rect key="frame" x="118.5" y="298" width="109.5" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="bxx-jv-nTu"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
                         <color key="textColor" red="0.94069093465805054" green="0.47874510288238525" blue="0.039385274052619934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>

@@ -38,7 +38,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 3;    //count number of row from counting array hear cataGorry is An Array
+    return _questionListAr.count;    //count number of row from counting array hear cataGorry is An Array
 }
 
 
@@ -49,8 +49,10 @@
 
     ListofQandATableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListofQandATableViewCell"];
 
-cell.lblQa.text = @"Q :ajskfnas;kfnsa";
-    cell.lblA .text = @"A:aksjjsklabfjlsabfljdbfljkshdasjkhdjahdjahshdsjahdhsajkdhasdjhsakjdhasjdhashdahdhsakhdsahdash ";
+    NSDictionary * dict = [ _questionListAr objectAtIndex:indexPath.row];
+    cell.lblQa.text = [NSString stringWithFormat:@"Q:%@",[dict objectForKey:@"question"]];
+
+    cell.lblA .text = [NSString stringWithFormat:@"A:%@",[dict objectForKey:@"defaultAnswer"]];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

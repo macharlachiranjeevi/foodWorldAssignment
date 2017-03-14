@@ -12,4 +12,5 @@
 @property (strong, nonatomic) IBOutlet UILabel *headerLbl;
 @property (strong, nonatomic) IBOutlet UICollectionView *iconCollectionView;
 @property(strong,nonatomic) NSArray * iconAr;
+@property(strong,nonatomic) NSString * veriation;
 @end

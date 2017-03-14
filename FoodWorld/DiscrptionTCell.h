@@ -11,5 +11,5 @@
 @interface DiscrptionTCell : UITableViewCell<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (strong, nonatomic) IBOutlet UICollectionView *Col_disc;
 @property (strong, nonatomic) IBOutlet UILabel *Lbl_disc;
-
+@property(strong,nonatomic) NSArray * discArray;
 @end

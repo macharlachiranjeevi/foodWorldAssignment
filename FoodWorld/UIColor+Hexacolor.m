@@ -1,80 +1,14 @@
 //
-//  productVariantTCell.m
+//  UIColor+Hexacolor.m
 //  FoodWorld
 //
 //  Created by chiranjeevi macharla on 14/03/17.
 //  Copyright © 2017 Chiranjeevi. All rights reserved.
 //
 
-#import "productVariantTCell.h"
-#import "IconCollectionViewCell.h"
 #import "UIColor+Hexacolor.h"
-@implementation productVariantTCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
--(void)layoutSubviews{
-    [super layoutSubviews];
-    _iconCollectionView.delegate = self;
-    _iconCollectionView.dataSource = self;
-    [_iconCollectionView  registerNib:[UINib nibWithNibName:@"IconCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"IconCollectionViewCell"];
-    [_iconCollectionView reloadData];
-
-
-}
-// mark - collection view methods
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-
-    return 1;
-}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-
-    return _iconAr.count;
-}
-
--(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-
-    IconCollectionViewCell *cell = (IconCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"IconCollectionViewCell" forIndexPath:indexPath];
-
-//    "name": "PEACH",
-//    "code": "#FFDAB9",
-
-    NSDictionary * dict = [_iconAr objectAtIndex:indexPath.row];
-    if ([_veriation isEqualToString:@"F"]) {
-    cell.circleLbl .layer.cornerRadius = cell.circleLbl.frame.size.height/2;
-    cell.circleLbl.clipsToBounds = YES;
-    cell.circleLbl.backgroundColor   = [self colorFromHexString:[dict objectForKey:@"code"]];
-    cell.titleLbl.text = [dict objectForKey:@"name"];
-    }
-    if ([_veriation isEqualToString:@"V"]) {
-        cell.circleLbl .layer.cornerRadius = cell.circleLbl.frame.size.height/2;
-        cell.circleLbl.clipsToBounds = YES;
-        cell.circleLbl.text = [dict objectForKey:@"volume"]  ;
-        cell.circleLbl.layer.borderColor   = [UIColor grayColor].CGColor;
-        cell.circleLbl.layer.borderWidth = 1;
-        cell.circleLbl.font = [ UIFont systemFontOfSize:12];
-        [cell.titleLbl setHidden:YES];
-    }
-
-    return cell;
-
-}
-- (CGSize)collectionView:(UICollectionView *)collectionView
-                  layout:(UICollectionViewLayout *)collectionViewLayout
-  sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-
-    return CGSizeMake(69, 84);
-}
+@implementation UIColor (Hexacolor)
 
 - (UIColor *)colorFromHexString:(NSString *)hexString
 {
@@ -120,5 +54,4 @@
     [[NSScanner scannerWithString: fullHex] scanHexInt: &hexComponent];
     return hexComponent / 255.0;
 }
-
 @end
