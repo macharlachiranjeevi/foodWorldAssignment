@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RatingTbleCell" id="KGk-i7-Jjw" customClass="RatingTbleCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starFillIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Nhv-UD-SBF">
+                        <rect key="frame" x="7" y="7" width="30" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="gKU-Ka-cNI"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starFillIcon" translatesAutoresizingMaskIntoConstraints="NO" id="yUU-D9-nOF">
+                        <rect key="frame" x="37" y="7" width="30" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="3BN-WR-qfB"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starFillIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wcz-io-6NA">
+                        <rect key="frame" x="67" y="7" width="30" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="PiX-AY-Qih"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starFillIcon" translatesAutoresizingMaskIntoConstraints="NO" id="L3X-f9-mf3">
+                        <rect key="frame" x="98" y="7" width="30" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="6oJ-AW-pnI"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nonFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ga-0b-sYQ">
+                        <rect key="frame" x="132" y="8" width="30" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="znF-1r-GBn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Users Review" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Em6-gk-wBV">
+                        <rect key="frame" x="182" y="7" width="131" height="30"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <color key="textColor" red="0.94069093465805054" green="0.47874510288238525" blue="0.039385274052619934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yUU-D9-nOF" firstAttribute="top" secondItem="wcz-io-6NA" secondAttribute="top" id="1gf-Sp-Xi5"/>
+                    <constraint firstItem="9ga-0b-sYQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="1th-Wx-Ixj"/>
+                    <constraint firstItem="L3X-f9-mf3" firstAttribute="top" secondItem="Em6-gk-wBV" secondAttribute="top" id="2fQ-0C-eIq"/>
+                    <constraint firstItem="Nhv-UD-SBF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="39Z-xa-mDY"/>
+                    <constraint firstItem="yUU-D9-nOF" firstAttribute="leading" secondItem="Nhv-UD-SBF" secondAttribute="trailing" id="6F6-uq-y8n"/>
+                    <constraint firstItem="yUU-D9-nOF" firstAttribute="bottom" secondItem="wcz-io-6NA" secondAttribute="bottom" id="7Ec-aC-UEp"/>
+                    <constraint firstItem="L3X-f9-mf3" firstAttribute="leading" secondItem="wcz-io-6NA" secondAttribute="trailing" constant="1" id="A3N-12-aKf"/>
+                    <constraint firstItem="L3X-f9-mf3" firstAttribute="centerY" secondItem="Em6-gk-wBV" secondAttribute="centerY" id="KqE-fe-N8J"/>
+                    <constraint firstItem="9ga-0b-sYQ" firstAttribute="bottom" secondItem="Em6-gk-wBV" secondAttribute="bottom" id="Uqg-3H-0PK"/>
+                    <constraint firstItem="wcz-io-6NA" firstAttribute="bottom" secondItem="L3X-f9-mf3" secondAttribute="bottom" id="Zdh-o1-MEZ"/>
+                    <constraint firstItem="Nhv-UD-SBF" firstAttribute="top" secondItem="yUU-D9-nOF" secondAttribute="top" id="c8y-Hp-jc8"/>
+                    <constraint firstItem="Nhv-UD-SBF" firstAttribute="bottom" secondItem="yUU-D9-nOF" secondAttribute="bottom" id="eDB-5Y-63J"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Em6-gk-wBV" secondAttribute="trailing" constant="-1" id="gfO-32-lg2"/>
+                    <constraint firstItem="Nhv-UD-SBF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-1" id="n6H-lt-MCY"/>
+                    <constraint firstItem="Em6-gk-wBV" firstAttribute="leading" secondItem="9ga-0b-sYQ" secondAttribute="trailing" constant="20" id="nZa-im-ZB1"/>
+                    <constraint firstItem="9ga-0b-sYQ" firstAttribute="centerY" secondItem="Em6-gk-wBV" secondAttribute="centerY" id="rHz-3y-NDt"/>
+                    <constraint firstItem="wcz-io-6NA" firstAttribute="leading" secondItem="yUU-D9-nOF" secondAttribute="trailing" id="sga-tX-K7i"/>
+                    <constraint firstItem="9ga-0b-sYQ" firstAttribute="leading" secondItem="L3X-f9-mf3" secondAttribute="trailing" constant="4" id="xbG-76-ene"/>
+                    <constraint firstItem="wcz-io-6NA" firstAttribute="top" secondItem="L3X-f9-mf3" secondAttribute="top" id="zBj-4Z-aVx"/>
+                </constraints>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="nonFill" width="21" height="20"/>
+        <image name="starFillIcon" width="25" height="23"/>
+    </resources>
+</document>
