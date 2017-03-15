@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		475A3AB03E4DDC85E7595AB4 /* libPods-FoodWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CD02E3425DD3458E9371A2 /* libPods-FoodWorld.a */; };
-		B42D03F71E7856F500DF168E /* UIColor+Hexacolor.m in Sources */ = {isa = PBXBuildFile; fileRef = B42D03F61E7856F500DF168E /* UIColor+Hexacolor.m */; };
 		B4763A671E780368002DC98B /* SkuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4763A651E780367002DC98B /* SkuItemCell.m */; };
 		B4763A681E780368002DC98B /* SkuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4763A661E780367002DC98B /* SkuItemCell.xib */; };
 		B4763A6C1E7817BA002DC98B /* RatingTbleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4763A6A1E7817BA002DC98B /* RatingTbleCell.m */; };
@@ -42,8 +41,6 @@
 /* Begin PBXFileReference section */
 		33CD02E3425DD3458E9371A2 /* libPods-FoodWorld.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodWorld.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD16A2D304C2065582F41E6 /* Pods-FoodWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodWorld/Pods-FoodWorld.release.xcconfig"; sourceTree = "<group>"; };
-		B42D03F51E7856F500DF168E /* UIColor+Hexacolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hexacolor.h"; sourceTree = "<group>"; };
-		B42D03F61E7856F500DF168E /* UIColor+Hexacolor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hexacolor.m"; sourceTree = "<group>"; };
 		B4763A641E780367002DC98B /* SkuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkuItemCell.h; sourceTree = "<group>"; };
 		B4763A651E780367002DC98B /* SkuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkuItemCell.m; sourceTree = "<group>"; };
 		B4763A661E780367002DC98B /* SkuItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SkuItemCell.xib; sourceTree = "<group>"; };
@@ -233,8 +230,6 @@
 				B4ECCC7F1E77EDEB0018086E /* AppDelegate.m */,
 				B4ECCC811E77EDEB0018086E /* ViewController.h */,
 				B4ECCC821E77EDEC0018086E /* ViewController.m */,
-				B42D03F51E7856F500DF168E /* UIColor+Hexacolor.h */,
-				B42D03F61E7856F500DF168E /* UIColor+Hexacolor.m */,
 				B4763A791E782431002DC98B /* CustomeClasses */,
 				B4ECCC841E77EDEC0018086E /* Main.storyboard */,
 				B4ECCC981E77F2710018086E /* ServiceHandelr */,
@@ -418,7 +413,6 @@
 				B4ECCC801E77EDEB0018086E /* AppDelegate.m in Sources */,
 				B4763A861E782BCE002DC98B /* QandAcell.m in Sources */,
 				B4763A8D1E783184002DC98B /* ProductComboTCell.m in Sources */,
-				B42D03F71E7856F500DF168E /* UIColor+Hexacolor.m in Sources */,
 				B4763A761E781C2C002DC98B /* IconCollectionViewCell.m in Sources */,
 				B4ECCC971E77EF8E0018086E /* BusinessHandler.m in Sources */,
 				B4763A671E780368002DC98B /* SkuItemCell.m in Sources */,

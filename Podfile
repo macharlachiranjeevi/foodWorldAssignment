@@ -5,6 +5,8 @@ target 'FoodWorld' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 pod 'SDWebImage'
+pod 'MBProgressHUD', '~> 1.0.0'
+pod 'IQKeyboardManager'
   # Pods for FoodWorld
 
 end

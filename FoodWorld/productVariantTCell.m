@@ -8,7 +8,7 @@
 
 #import "productVariantTCell.h"
 #import "IconCollectionViewCell.h"
-#import "UIColor+Hexacolor.h"
+
 @implementation productVariantTCell
 
 - (void)awakeFromNib {

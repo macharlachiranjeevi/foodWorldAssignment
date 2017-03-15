@@ -44,8 +44,8 @@
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 
     UICollectionViewCell *cell = (UICollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"Col_disc" forIndexPath:indexPath];
-
-  UILabel *  discLbl = [[ UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 30)];
+[[[cell contentView] subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+   UILabel *  discLbl = [[ UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 30)];
     NSDictionary * dict =[_discArray objectAtIndex:indexPath.row];
     discLbl.text = [dict  objectForKey:@"title"];
     discLbl.font = [ UIFont boldSystemFontOfSize:15];

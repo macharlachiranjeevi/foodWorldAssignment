@@ -8,6 +8,7 @@
 
 #import "SameitemsTCell.h"
 #import "SameitemCCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 @implementation SameitemsTCell
 
 - (void)awakeFromNib {
@@ -23,7 +24,11 @@
 -(void)layoutSubviews{
     _sameItemCollView.delegate = self;
     _sameItemCollView.dataSource = self;
-    [_sameItemCollView registerClass:[SameitemCCell class] forCellWithReuseIdentifier:@"SameitemCCell" ];
+  _similarItemListArry =  @[@"http://119.81.82.197:9090/hngeCommerceWebservice/rest/image/PDP/536163_1.jpg",
+    @"http://119.81.82.197:9090/hngeCommerceWebservice/rest/image/PDP/536163_2.jpg",
+    @"http://119.81.82.197:9090/hngeCommerceWebservice/rest/image/PDP/536163_1.jpg",
+     @"http://119.81.82.197:9090/hngeCommerceWebservice/rest/image/PDP/536163_2.jpg"];
+
     [_sameItemCollView reloadData];
 }
 
@@ -42,6 +47,17 @@
 
     SameitemCCell *cell = (SameitemCCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"SameitemCCell" forIndexPath:indexPath];
 
+    [ cell.sameImge sd_setImageWithURL:[NSURL URLWithString: [_similarItemListArry objectAtIndex:indexPath.row]] placeholderImage:[UIImage imageNamed:@""]];
+    cell.sameImge.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    cell.sameImge.layer.borderWidth = 1;
+    cell.nameLbl.text = @"product";
+    cell.quantityLbl.text = @"200Ml";
+  NSAttributedString * text =   [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"Rs300" ]
+                                    attributes:@{NSStrikethroughStyleAttributeName:@(NSUnderlineStyleSingle)}];
+    cell.disculbl.attributedText = text;
+    cell.pricelbl.text = @"Rs250";
+
+   
 
 
     // [cell.contentView addSubview:discLbl];
@@ -56,6 +72,6 @@
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    return CGSizeMake(80, 35);
+    return CGSizeMake(191, 168);
 }
 @end

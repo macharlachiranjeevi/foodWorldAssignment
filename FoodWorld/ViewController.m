@@ -16,6 +16,7 @@
 #import "QandAcell.h"
 #import "ProductComboTCell.h"
 #import "SameitemsTCell.h"
+#import "MBProgressHUD.h"
 #import <SDWebImage/UIImageView+WebCache.h>
  static NSString *firstCell = @"SkuItemCell";
  static NSString *secondCell = @"RatingTbleCell";
@@ -48,6 +49,7 @@
       [_Tbl_productDetail registerNib:[UINib nibWithNibName:fourthCell bundle:nil] forCellReuseIdentifier:fourthCell];
     [_Tbl_productDetail registerNib:[UINib nibWithNibName:fifthcell bundle:nil] forCellReuseIdentifier:fifthcell];
     [_Tbl_productDetail registerNib:[UINib nibWithNibName:SevenCell bundle:nil] forCellReuseIdentifier:SevenCell];
+    [_Tbl_productDetail setAllowsSelection:NO];
 
     [self getProductDetailsFromService];
     // Do any additional setup after loading the view, typically from a nib.
@@ -55,6 +57,7 @@
 
 -(void)getProductDetailsFromService{
     NSDictionary *postObj = @{@"appType":@"iOS",@"appVersion":@"2.3.4",@"skuId":@"536163",@"pinCode":@"560097",@"loggedInUserId":@"hngtest.rupanjan@gmail.com",@"deviceId":@""};
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 [[BusinessHandler sharedInstance]ProductDetailfromServer:postObj completionHandler:^(NSDictionary *productDetailResponce) {
     NSLog(@"responce from Ser%@",productDetailResponce);
 
@@ -68,10 +71,11 @@
     productComboList = [productDetailResponce objectForKey:@"productComboList"];
     similarItemList = [productDetailResponce objectForKey:@"similarItemList"];
     [_Tbl_productDetail reloadData];
-
+[MBProgressHUD hideHUDForView:self.view animated:YES];
 
 } andErrorcompletionHandler:^(NSString *errormessage) {
-
+    NSLog(@"errormessage %@",errormessage);
+[MBProgressHUD hideHUDForView:self.view animated:YES];
 }];
 }
 
@@ -240,7 +244,7 @@ case 7:
         case 9:
         {
             SameitemsTCell*cell = [tableView dequeueReusableCellWithIdentifier:eightcell];
-            cell.similarItemListArry= similarItemList;
+            //cell.similarItemListArry= similarItemList;
             [cell.sameItemCollView reloadData ];
             return cell;
         }

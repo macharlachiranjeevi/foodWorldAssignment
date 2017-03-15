@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FoodWorld.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>AF8C9CAC860623B30D7EC9E625099063</key>
+		<key>41ED3337C11B9784A2AB3A78C0B065A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B7D0B0CB38888B351794FA3F1A657278</key>
+		<key>586F2DFA9BDCC6675C2546793A69E5CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9650B5ADCE86F1A055FAFC635284BDB5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B0D1A500C791273D860837C455141477</key>
 		<dict>
 			<key>primary</key>
 			<true/>
